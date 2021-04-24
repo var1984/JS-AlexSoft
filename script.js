@@ -1,15 +1,19 @@
 const arr = [];
+
+
 const select = document.querySelector("#select");
 const listItems = document.querySelector('ul')
 
 const chars = "abcdefghiklmnopqrstuvwxyz";
 
 function randomChars() {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; arr.length < 5; i++) {
     let num = chars[Math.floor(Math.random() * chars.length)];
 
-    arr.push(num);
+    if (!arr.includes(num)) arr.push(num);
+   
   }
+ 
 }
 randomChars();
 
